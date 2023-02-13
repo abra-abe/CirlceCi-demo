@@ -9,3 +9,11 @@ describe('GET /', () => {
         })
     })
 })
+describe('POST /users', () => {
+    describe("Username and password are passed", () => {
+        test("Should respond with status code 200", async () => {
+            const response = await request(app).post('/users');
+            expect(response.statusCode).toBe(200);
+        })
+    })
+})
